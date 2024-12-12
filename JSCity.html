@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seoul</title>
+    <link href="JSCityStyle.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#Location">Location</a></li>
+                <li><a href="#History">History</a></li>
+                <li><a href="#Attractions">Attractions</a></li>
+                <li><a href="#Hotels">Top Hotels</a></li>
+            </ul>
+        </nav>
+        <div class="title">
+            <p>Welcome to the City of Seoul</p>
+        </div>
+    </header>
+	
+	
+    <main>
+		<button id="scrollToTopBtn" onclick="scrollToTop()">Scroll to Top</button>
+		<script>
+			function getRandomColor() {
+				var letters = '0123456789ABCDEF';
+				var color = '#';
+				for (var i = 0; i < 6; i++) {
+					color += letters[Math.floor(Math.random() * 16)];
+				}
+				return color;
+			}
+
+			function changeToRandomColor() {
+				var bodyElement = document.body;
+
+				var randomColor = getRandomColor();
+
+				bodyElement.style.backgroundColor = randomColor;
+			}
+
+			setInterval(changeToRandomColor, 7000);
+
+			changeToRandomColor();
+			
+			function scrollToTop() {
+				window.scrollTo({
+					top: 0,
+					behavior: 'smooth' 
+				});
+			}
+
+			function toggleScrollToTopButton() {
+				var scrollToTopBtn = document.getElementById('scrollToTopBtn');
+				if(document.documentElement.scrollTop < (document.body.offsetHeight - window.innerHeight - 500)) {
+					scrollToTopBtn.style.display = 'none';
+				} else {
+					scrollToTopBtn.style.display = 'block';
+				}
+			}
+
+			window.addEventListener('scroll', toggleScrollToTopButton);
+
+			toggleScrollToTopButton();
+		</script>
+		
+        <section id="Location">
+            <h1>Location of Seoul</h1>
+			<div id = "loc">
+			<p><img src = "https://cdn.britannica.com/58/241258-050-5AB3DF13/Locator-map-Seoul.jpg" style="width:400px; height:400px;" alt="Seoul on a map">
+            <br><br>Seoul is located in the northwestern area of South Korea. Its neighboring countries are North Korea, China, and Japan.</p>
+			<table>
+				<tr>
+				<th colspan="3">Flights to Seoul</th>
+				</tr>
+				<tr>
+				<th>Country</th>
+				<th>Price</th>
+				<th>Time</th>
+				</tr>
+				<tr>
+					<td>London, UK</td>
+					<td>$500-$1000</td>
+					<td>15-18 hours</td>
+				</tr>
+				<tr>
+					<td>NYC, USA</td>
+					<td>$700-$1200</td>
+					<td>16-20 hours</td>
+				</tr>
+				<tr>
+					<td>L.A., USA</td>
+					<td>$600-$1100</td>
+					<td>14-18 hours</td>
+				</tr>
+				<tr>
+					<td>Tokyo, Japan</td>
+					<td>$200-$300</td>
+					<td>3 hours</td>
+				</tr>
+				<tr>
+					<td>Beijing, China</td>
+					<td>$100-$200</td>
+					<td>2 hours</td>
+				</tr>
+				<tr>
+					<td>Delhi, India</td>
+					<td>$300-$800</td>
+					<td>7-15 hours</td>
+				</tr>
+			</table>
+			</div>
+        </section>
+
+        <section id="History">
+            <h1>History and Historical Sites of Seoul</h1>
+			<div id = "his"><p>This graph shows the <b>growth of Seoul</b> as a city and population throughout the years, and how it is <em>thriving</em> more than ever.
+			Check out this website to know more about the history and statistics of Seoul. <a href = "https://www.seoulsolution.kr/en/content/3323">The History of Seoul</a><br>
+			<br><img src = "https://www.seoulsolution.kr/sites/all/themes/seoulsolution/images/static/img-history-graph-en.jpg" style = "width:700px;height:400px;" alt = "Graph of the Growth of Seoul"></p>
+            <br><div id = "palace"><p><b>Changdeokgung Palace</b> is located to the east of Gyeongbokgung Palace, and it is also known as Donggwol, the Eastern Palace. 
+			The castle has been home to the government of Joseon for 270 years and was also the favorite residence of many kings of the Joseon Dynasty. 
+			The Changdeokgung Palace is the royal residential palace with the most extended service. 
+			Changdeokgung Palace is well-preserved relative to other castles and still has many of its original features. 
+			To read more about this palace and other historical sites in Seoul check out this website, 
+			<a href = "https://us.trip.com/blog/historical-sites-things-to-do-in-seoul/">12 Historical Sites that Worth Vistiting in Seoul</a>.</p></div><br><br>
+			<img src = "https://ak-d.tripcdn.com/images/100o190000017x8438B82_Z_640_10000_R5.jpg_.webp?proc=autoorient&proc=source%2ftrip" style = "width:600px; height:400px;" alt="Changdeokgung Palace">
+			</div>
+		</section>
+
+        <section id="Attractions">
+            <h1>Local Attractions</h1>
+			<div id = "att">
+			<ul>
+                <li><div class = "h-box"><p class = "text">Lotte World Tower & Mall. Prices may vary based parking and the customer.</p>
+				<img src = "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/18/37/81/fb/img-20190629-143756-largejpg.jpg?w=1200&h=-1&s=1" 
+				style = "width:400px; height:250px;" alt = "Lotte World Tower and Mall" class = "image"></div>
+				</li>
+                <li><div class = "h-box"><p class = "text">DMZ Tour from Seoul (Red Suspension Bridge). About $50 per adult.</p><img src = "https://www.onedaykorea.com/wp-content/uploads/2015/03/DMZ-min-1-min-1.jpg" 
+				style = "width:400px; height:250px;" alt = "DMZ" class = "image"></div>
+				</li>
+                <li><div class = "h-box"><p class = "text">Gangnam Walking Tour on Youth and Society in Seoul. Price is around $32 per adult.</p>
+				<img src = "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/10/0c/6e/7e.jpg"
+				style = "width:400px; height:250px;" alt = "DMZ" class = "image"></div>
+				</li>
+                <li><div class = "h-box"><p class = "text">Korean Cooking Class with Full-Course Meal & Local Market Tour in Seoul. $81 per adult</p>
+				<img src = "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/07/0d/b9/f3.jpg"
+				style = "width:400px; height:200px;" alt = "DMZ" class = "image"></div></li>
+            </ul>
+			</div><br>
+			<p style = "font-size: 22px;">To see more information about these local attractions and other attractions in Seoul 
+			check out this website, <a href = "https://www.tripadvisor.com/Attractions-g294197-Activities-Seoul.html">Things to do in Seoul</a>.<p>
+        </section>
+
+        <section id="Hotels">
+            <h1>Top Hotels to Stay At</h1>
+            <div id = "hot">
+			<table>
+				<tr>
+				<th colspan="2"><br>Best Hotels in Seoul<br><br></th>
+				</tr>
+				<tr>
+				<th>Hotel Name</th>
+				<th>Price Per Night</th>
+				</tr>
+				<tr>
+					<td>The Westin Josun Seoul</td>
+					<td>$200-$300</td>
+				</tr>
+				<tr>
+					<td>Lotte Hotel Seoul</td>
+					<td>$200</td>
+				</tr>
+				<tr>
+					<td>Hotel PJ Myeongdong</td>
+					<td>$100</td>
+				</tr>
+				<tr>
+					<td>Conrad Seoul</td>
+					<td>$350</td>
+				</tr>
+				<tr>
+					<td>Nine Tree Hotel Myeong-dong</td>
+					<td>$100</td>
+				</tr>
+				<tr>
+				<th colspan="2"><br>To view more information visit, <a href = "https://english.visitseoul.net/hotels">VisitSeoul.net</a><br><br></th>
+				</tr>
+			</table>
+			<img src = "https://cache.marriott.com/content/dam/marriott-digital/wi/apec/hws/s/selwi/es_es/photo/unlimited/assets/selwi-exterior-8543.jpg" 
+			style = "width:500px; height:400px;" alt = "Picture of The Westin Josun Hotel in Seoul">
+			</div>
+        </section>
+    </main>
+	
+
+    <footer>
+        <p>&copy; 2024 AceMartin Incorporated. All rights reserved.</p>
+    </footer>
+</body>
+</html>
